@@ -2,7 +2,7 @@ import convertInputToElvesRationsCalories from './lib/convertInputToElvesRations
 import sum from '../lib/sum.ts';
 
 const input = await Deno.readTextFile('day-1/input.txt');
-const elvesRationsCalories = convertInputToElvesRationsCalories(input);
+const elvesRationsCalories = convertInputToElvesRationsCalories(input.trim());
 
 const mostCaloriesAnElfIsCarrying: number = elvesRationsCalories.reduce(
   (lastHighestCalories, currentElfRations) => {

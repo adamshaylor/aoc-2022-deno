@@ -2,7 +2,7 @@ import convertInputToElvesRationsCalories from './lib/convertInputToElvesRations
 import sum from '../lib/sum.ts';
 
 const input = await Deno.readTextFile('day-1/input.txt');
-const elvesRationsCalories = convertInputToElvesRationsCalories(input);
+const elvesRationsCalories = convertInputToElvesRationsCalories(input.trim());
 const elvesCalories: number[] = elvesRationsCalories.map(sum);
 const sortedElvesCalories = Array.from(elvesCalories).sort((a, b) => b - a);
 const topThreeElvesCalories = sortedElvesCalories.slice(0, 3);

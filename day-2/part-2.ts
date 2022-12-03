@@ -36,7 +36,7 @@ const myOutcomeToOpponentShapeToMyShape: Record<Outcome, Record<Shape, Shape>> =
 }
 
 const input = await Deno.readTextFile('day-2/input.txt');
-const inputRows = input.split('\n');
+const inputRows = input.trim().split('\n');
 
 const strategyRounds: Round[] = inputRows.map(rowString => {
   const [ opponentShapeCode, myOutcomeCode ] = rowString.split(' ') as [ OpponentShapeCode, MyOutcomeCode ];
